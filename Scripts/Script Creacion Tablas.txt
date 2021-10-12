@@ -1,0 +1,28 @@
+/*==============================================================*/
+/* DBMS name:      ORACLE Version 11g    - TToquica 2021	        */
+/*==============================================================*/
+
+drop table BANCO cascade constraints;
+drop table SUCURSAL cascade constraints;
+
+create table BANCO
+(
+   NITBANCO              INTEGER                        not null,
+   NOMBREBANCO          VARCHAR2(30)                    not null,
+   FCREATEBANCO		 DATE                    	not null,
+   constraint PK_BANCO primary key (NITBANCO)
+);
+
+create table SUCURSAL
+(
+   CODSUCURSAL                INTEGER                        not null,
+   NOMBRESUCURSAL            VARCHAR2(50)                    not null,
+   UBICSUCURSAL	              VARCHAR2(6)		     not null,
+   NUMEMPSUCURSAL              SMALLINT                      not null,
+   ANTIGUEDADANIOS 	       INTEGER                       not null,
+   NITBANCO                    INTEGER                       not null,
+   constraint PK_SUCURSAL primary key (CODSUCURSAL),   
+   constraint FK_NITBANCO foreign key (NITBANCO) references BANCO (NITBANCO),
+   constraint CKC_UBICSUCURSAL CHECK (UBICSUCURSAL IN('norte','sur','centro'))
+);
+

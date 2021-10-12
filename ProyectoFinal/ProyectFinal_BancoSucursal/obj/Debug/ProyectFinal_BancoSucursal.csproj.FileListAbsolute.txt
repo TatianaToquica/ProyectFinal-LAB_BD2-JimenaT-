@@ -1,0 +1,11 @@
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\bin\Debug\ProyectFinal_BancoSucursal.exe.config
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\bin\Debug\ProyectFinal_BancoSucursal.exe
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\bin\Debug\ProyectFinal_BancoSucursal.pdb
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\bin\Debug\Oracle.DataAccess.dll
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.Form1.resources
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.Properties.Resources.resources
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.csproj.GenerateResource.cache
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.exe
+C:\Users\HP\Documents\LAB_BD2\Repeticion LAB BD2\ProyectoFinal\ProyectFinal_BancoSucursal\obj\Debug\ProyectFinal_BancoSucursal.pdb

@@ -1,0 +1,23 @@
+
+---Insert Banco-----
+
+INSERT INTO BANCO VALUES (1,'Bancolombia','02/12/1990');
+INSERT INTO BANCO VALUES (2,'Caja Social','05/04/1993');
+INSERT INTO BANCO VALUES (3,'Agrario','03/10/1992');
+INSERT INTO BANCO VALUES (4,'Bogotá','12/05/1990');
+INSERT INTO BANCO VALUES (5,'Davivienda','24/08/1992');
+
+
+---Insert Sucursal----
+
+INSERT INTO SUCURSAL VALUES(1,'Bancolombia Garzón','centro',10,20,1);
+INSERT INTO SUCURSAL VALUES(2,'Bancolombia Popayán','centro',20,12,1);
+INSERT INTO SUCURSAL VALUES(3,'Bancolombia Popayán','norte',15,18,1);
+INSERT INTO SUCURSAL VALUES(4,'Agrario Popayan','centro',17,14,3);
+INSERT INTO SUCURSAL VALUES(5,'Agrario Popayan','norte',10,12,3);
+INSERT INTO SUCURSAL VALUES(6,'Banco Bogotá Garzón','centro',11,20,4);
+INSERT INTO SUCURSAL VALUES(7,'Banco Bogotá Popayán','centro',17,13,4);
+INSERT INTO SUCURSAL VALUES(8,'Banco Bogotá Popayán','sur',12,14,4);
+INSERT INTO SUCURSAL VALUES(9,'Banco Bogotá Neiva','centro',10,15,4);
+INSERT INTO SUCURSAL VALUES(10,'Banco Davivienda Garzón','centro',14,18,5);
+INSERT INTO SUCURSAL VALUES(11,'Banco Davivienda Neiva','sur',18,20,5);

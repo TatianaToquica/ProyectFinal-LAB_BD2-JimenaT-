@@ -1,0 +1,94 @@
+
+--Procedimiento crear banco---
+
+create or replace procedure IngresarBanco(v_idBanco in BANCO.NITBANCO%type,v_nomBanco in BANCO.NOMBREBANCO%type, v_fechaBanco in BANCO.FCREATEBANCO%type,v_mensaje out VARCHAR2)
+is
+    v_cont number;
+begin
+    select count(nitBanco) 
+    into v_cont
+    from BANCO
+    where nitBanco=v_idBanco;  
+    
+    if v_cont=0 then
+         insert into BANCO values(v_idBanco,v_nomBanco,v_fechaBanco);
+         v_mensaje:='El Banco se ha registrado con éxito';
+    else
+         v_mensaje:='El Banco a registrar ya se encuentra registrado';
+    end if;  
+end;
+
+
+--Procedimiento crear sucursal--
+
+create or replace procedure IngresarSucursal (v_idSucursal in SUCURSAL.CODSUCURSAL%type,v_nomSucursal in SUCURSAL.NOMBRESUCURSAL%type, 
+v_ubicaSucursal in SUCURSAL.UBICSUCURSAL%type, v_nEmpSucursal in SUCURSAL.NUMEMPSUCURSAL%type, v_aniosSucursal in SUCURSAL.ANTIGUEDADANIOS%type,
+v_idBanco SUCURSAL.NITBANCO%type, v_mensaje out VARCHAR2)
+is
+    v_contS number;
+    v_contB number;
+begin
+    select count(codSucursal) 
+    into v_contS
+    from Sucursal
+    where CODSUCURSAL=v_idSucursal;  
+    
+    select count(nitBanco) 
+    into v_contB
+    from BANCO
+    where NITBANCO=v_idBanco;  
+    if v_contS=0 then
+          if v_contB>0 then
+              insert into SUCURSAL values(v_idSucursal,v_nomSucursal,v_ubicaSucursal,v_nEmpSucursal,v_aniosSucursal,v_idBanco);
+              v_mensaje:='La Sucursal se ha registrado con éxito';
+          else
+               v_mensaje:='Dicho Banco no existe en el sistema';
+          end if;
+    else
+         v_mensaje:='La Sucursal a registrar ya se encuentra registrada';
+    end if;   
+end;
+
+
+---Consultar sucursal--
+
+create or replace procedure  ConsultarSucursal(v_idBanco in SUCURSAL.NITBANCO%type,cur_Sucursales in out SYS_REFCURSOR, v_mensaje out VARCHAR2)
+is
+  v_cont number;
+begin
+    select count(nitBanco) 
+    into v_cont
+    from BANCO
+    where nitBanco=v_idBanco;  
+    
+    if v_cont>0 then
+          OPEN cur_Sucursales FOR
+          select *
+          from SUCURSAL
+          where NITBANCO=v_idBanco;
+          v_mensaje:='La consulta se ha ejecutado con exito';
+    else
+         v_mensaje:='Dicho Banco no se encuentra registrado';
+    end if;    
+end;
+
+
+--Eliminar sucursal--
+
+create or replace procedure  EliminarSucursal(v_idSucursal in SUCURSAL.CODSUCURSAL%type, v_mensaje out VARCHAR2)
+is
+    v_cont number;
+begin
+    select count(codSucursal) 
+    into v_cont
+    from Sucursal
+    where CODSUCURSAL=v_idSucursal;   
+    
+    if v_cont>0 then
+        delete from SUCURSAL where CODSUCURSAL=v_idSucursal;  
+        v_mensaje:='La Sucursal ha sido eliminada con éxito';
+    else
+         v_mensaje:='Dicha Sucursal no existe en el sistema';
+    end if;
+end;
+
